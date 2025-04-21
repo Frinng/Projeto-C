@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void CadastroCarro(){
     char modelo[50];
@@ -40,18 +41,66 @@ void Servicomanun(){
     char suspensão_e_direção;
     char reparos_em_motor;
     char transmissão_e_sistema_elétrico;
+    int escolha2;
+    int opcaoo;
+    do{
+        printf("============================\n");
+        printf("==========Servicos==========\n");
+        printf("============================\n");
+        printf("Nossos Servicos\n");
+        printf("1-Troca de oleo\n");
+        printf("2-Alinhamento e balanceamento\n");
+        printf("3-Revisao de freios\n");
+        printf("4-Suspensao e direcao\n");
+        printf("5-Reparos em motor\n");
+        printf("6-Transmissão e sistema eletrico.\n");
+        printf("7-Sair");
+        scanf("%d",escolha2);
+        
+        switch(escolha2){
+            case 1:
+                printf("=========================\n");
+                printf("======Troca De Oleo======\n");
+                printf("=========================\n");
 
-    printf("============================\n");
-    printf("==========Servicos==========\n");
-    printf("============================\n");
-    printf("Nossos Servicos\n");
-    printf("1-Troca de oleo\n");
-    printf("2-Alinhamento e balanceamento\n");
-    printf("3-Revisao de freios\n");
-    printf("4-Suspensao e direcao\n");
-    printf("5-Reparos em motor\n");
-    printf("6-Transmissão e sistema eletrico.\n");
+                printf("Tempo Estimado: 30 minutos\n");
+                printf("Valor : R$10.0000\n");
+                printf("Deseja Agendar o serviço? (s/n)\n");
+                scanf("%S", troca_de_óleo);
+                if(strcmp(troca_de_óleo,"s") == 0){
+                    printf("Temos esses horarios disponiveis para o dia 25/04");
+                    printf("1-07:30");
+                    printf("2-08:00");
+                    printf("3-14:30");
+                    printf("Escolha qual horario voce deseja agendar");
+                    scanf("%d", opcaoo);
 
+                    switch(opcaoo){
+                        case 1:
+                            printf("Troca de Oleo agendado o dia 25/04 as 07:30 de uma Sexta Feira");
+
+                            break;
+
+                        case 2:
+                            printf("Troca de Oleo agendado o dia 25/04 as 08:00 de uma Sexta Feira");  
+
+                            break;
+                        case 3:
+                            printf("Troca de Oleo agendado o dia 25/04 as 14:30 de uma Sexta Feira");    
+
+                            break;
+
+                    }
+
+                }else{
+                    printf("Voltando ao inicio");
+                }
+
+
+
+        }
+    
+    } while(escolha2 != 7);
 
 }
 int main(int argc, char const *argv[])
@@ -88,11 +137,6 @@ int main(int argc, char const *argv[])
         }
 
     }while (escolha != 3);
-
-
-    
-
-
 
     return 0;
 }
