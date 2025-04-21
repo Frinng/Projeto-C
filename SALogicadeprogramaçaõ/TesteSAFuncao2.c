@@ -7,24 +7,28 @@ void CadastroCarro(){
     char nomeCompletoDono[50];
     char servicocarro[20];
 
+    printf("======================================\n");
+    printf("=========Cadastro De Veiculos=========\n");
+    printf("======================================\n");
+
     //Pega o nome completo do dono do veiculo
-    printf("Digite o Nome Completo do Proprietario do veiculo: ");
+    printf("Digite o Nome Completo do Proprietario do veiculo:\n ");
     fgets(nomeCompletoDono, 50, stdin);
     
     // Coletando os dados do carro
-    printf("Digite o modelo do carro: ");
+    printf("Digite o modelo do carro: \n");
     fgets(modelo, 50, stdin);  // Lê o modelo com espaços
 
-    printf("Digite o ano do carro: ");
+    printf("Digite o ano do carro: \n");
     scanf("%d", &ano);
     getchar(); // Limpa o caractere de nova linha deixado pelo scanf
 
-    printf("Digite a placa do carro: ");
+    printf("Digite a placa do carro:\n ");
     fgets(placa, 20, stdin);
     
     // Exibindo os dados
     printf("\n--- Dados do Carro ---\n");
-    printf("Nome do Proprietario: ", nomeCompletoDono);
+    printf("Nome do Proprietario: %s", nomeCompletoDono);
     printf("Modelo: %s", modelo);
     printf("Ano: %d\n", ano);
     printf("Placa: %s", placa);
@@ -34,7 +38,61 @@ void Servicomanun(){
     char alinhamento_e_balanceamento;
     char revisão_de_freios;
     char suspensão_e_direção;
-    char além_de_reparos_em_motor;
+    char reparos_em_motor;
     char transmissão_e_sistema_elétrico;
 
+    printf("============================\n");
+    printf("==========Servicos==========\n");
+    printf("============================\n");
+    printf("Nossos Servicos\n");
+    printf("1-Troca de oleo\n");
+    printf("2-Alinhamento e balanceamento\n");
+    printf("3-Revisao de freios\n");
+    printf("4-Suspensao e direcao\n");
+    printf("5-Reparos em motor\n");
+    printf("6-Transmissão e sistema eletrico.\n");
+
+
+}
+int main(int argc, char const *argv[])
+{
+    int escolha;
+
+    do {
+        printf("============================\n");
+        printf("=======Menu Principal=======\n");
+        printf("============================\n");
+
+        printf("1-Cadastrar um novo Veiculo\n");
+        printf("2-Contratar Nosssos Serviços\n");
+        printf("3-Sair");
+        printf("Escolha uma das opcoes\n");
+        scanf("%d", &escolha);
+
+        switch (escolha){
+            case 1:
+                CadastroCarro();
+
+                break;
+            case 2:
+                Servicomanun();
+
+                break;
+            case 3:
+                printf("Saindo do Sistema...... \n");
+
+                break;
+            default:
+                printf("Opcao errada,tente novamente......\n");
+                    
+        }
+
+    }while (escolha != 3);
+
+
+    
+
+
+
+    return 0;
 }
