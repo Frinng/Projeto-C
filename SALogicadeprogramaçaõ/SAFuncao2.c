@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 
 // Definindo o registro
 struct Carro {
@@ -40,3 +40,4 @@ int main() {
 
     return 0;
 }
+    */
