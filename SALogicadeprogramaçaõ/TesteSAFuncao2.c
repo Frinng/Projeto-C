@@ -14,21 +14,21 @@ void CadastroCarro(){
 
     //Pega o nome completo do dono do veiculo
     printf("Digite o Nome Completo do Proprietario do veiculo:\n ");
-    fgets(nomeCompletoDono, 50, stdin);
-    nomeCompletoDono[strcspn(nomeCompletoDono, "\n")] = '\0';
-    
+    scanf("%s", nomeCompletoDono);
+    getchar();
+
     // Coletando os dados do carro
     printf("Digite o modelo do carro: \n");
-    fgets(modelo, 50, stdin);  // Lê o modelo com espaços
-    modelo[strcspn(modelo, "\n")] = '\0';
-
+    scanf("%s",modelo);
+    getchar();
+    
     printf("Digite o ano do carro: \n");
     scanf("%d", &ano);
     getchar();
 
     printf("Digite a placa do carro:\n ");
-    fgets(placa, 20, stdin);
-    placa[strcspn(placa, "\n")] = '\0';
+    scanf("%s", placa);
+    getchar();
     
     // Exibindo os dados
     printf("\n--- Dados do Carro ---\n");
@@ -57,7 +57,7 @@ void Servicomanun(){
         printf("3-Revisao de freios\n");
         printf("4-Suspensao e direcao\n");
         printf("5-Reparos em motor\n");
-        printf("6-Transmissão e sistema eletrico.\n");
+        printf("6-Transmissao e sistema eletrico.\n");
         printf("7-Sair\n");
         scanf("%d", &escolha2);
         getchar();
