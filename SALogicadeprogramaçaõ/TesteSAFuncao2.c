@@ -32,10 +32,10 @@ void CadastroCarro(){
     
     // Exibindo os dados
     printf("\n--- Dados do Carro ---\n");
-    printf("Nome do Proprietario: %s", nomeCompletoDono);
-    printf("Modelo: %s", modelo);
+    printf("Nome do Proprietario: %s\n", nomeCompletoDono);
+    printf("Modelo: %s\n", modelo);
     printf("Ano: %d\n", ano);
-    printf("Placa: %s", placa);
+    printf("Placa: %s\n", placa);
 }
 void Servicomanun(){
     char troca_de_oleo[10];
@@ -45,7 +45,7 @@ void Servicomanun(){
     char reparos_em_motor[10];
     char transmissao_e_sistema_eletrico[10];
     int escolha2;
-    int opcaoo, opcao1, opcao2, opcao3, opcao4, opcao5, opcao6, opcao7;
+    int opcaoo;
 
     do{
         printf("============================\n");
@@ -102,7 +102,7 @@ void Servicomanun(){
                     }
 
                 }else{
-                    printf("Escolha um horario disponivel");
+                    printf("Voltando ao inicio\n");
                 }
                 break;
             case 2:
@@ -120,10 +120,10 @@ void Servicomanun(){
                     printf("2-10:00\n");
                     printf("3-16:30\n");
                     printf("Escolha qual horario voce deseja agendar\n");
-                    scanf("%d", opcao1);
+                    scanf("%d", &opcaoo);
                     getchar();
 
-                    switch(opcao1){
+                    switch(opcaoo){
                         case 1:
                             printf("Alinhamento e balanceamento o dia 25/04 as 08:30 de uma Sexta Feira\n");
 
@@ -137,12 +137,62 @@ void Servicomanun(){
 
                             break;
                         default:
-                            printf("Escolha um horario disponivel");
+                            printf("Escolha um horario valido\n");
                             
                             break;
                     }
 
+                }else{
+                    printf("Voltando ao inicio\n");
                 }
+
+                break;
+            case 3:
+                printf("=====================================");
+                printf("==========Revisao de freios==========");
+                printf("=====================================");
+
+                printf("Tempo Estimado: 01:30min \n");
+                printf("Valor: 2.000.000.000\n");
+                printf("Deseja Agendar o serviço? (s/n)\n");
+                scanf("%s", revisaoo_de_freios);
+                if(strcmp(revisaoo_de_freios,"s") == 0 || strcmp(revisaoo_de_freios,"S") == 0 ){
+                    printf("Temos esses horarios disponiveis para o dia 25/04\n");
+                    printf("1-08:00\n");
+                    printf("2-10:30\n");
+                    printf("3-14:30\n");
+                    printf("Escolha qual horario voce deseja agendar\n");
+                    scanf("%d", &opcaoo);
+                    getchar();
+
+                    switch(opcaoo){
+                        case 1:
+                            printf("Revisao de freios o dia 25/04 as 08:00 de uma Sexta Feira\n");
+
+                            break;
+                        case 2:
+                            printf("Revisao de freios o dia 25/04 as 10:30 de uma Sexta Feira\n");
+
+                            break;
+                        case 3:
+                            printf("Revisao de freios o dia 25/04 as 14:30 de uma Sexta Feira\n");
+
+                            break;
+                        default:
+                            printf("Escolha um horario valido\n");    
+
+
+                    }
+                }else
+                {
+                    printf("Voltando ao inicio");
+                }
+                
+                break;
+            case 4:
+                printf("=====================================");
+                
+
 
                 break;
 
@@ -156,12 +206,12 @@ int main(int argc, char const *argv[])
     int escolha;
 
     do {
-        printf("============================\n");
-        printf("=======Menu Principal=======\n");
-        printf("============================\n");
+        printf("==========================================\n");
+        printf("==============Menu Principal==============\n");
+        printf("==========================================\n");
 
         printf("1-Cadastrar um novo Veiculo\n");
-        printf("2-Contratar Nosssos Serviços\n");
+        printf("2-Contratar Nosssos Servicos\n");
         printf("3-Sair\n");
         printf("Escolha uma das opcoes\n");
         scanf("%d", &escolha);
