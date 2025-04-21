@@ -314,7 +314,7 @@ void Servicomanun(){
 
                 break;
             default:
-                printf("Escolha uma opcao valida..\n"); 
+                printf("Voltando ao menu principal...\n"); 
 
                 break;
 
