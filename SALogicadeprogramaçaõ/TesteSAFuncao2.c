@@ -15,20 +15,20 @@ void CadastroCarro(){
     //Pega o nome completo do dono do veiculo
     printf("Digite o Nome Completo do Proprietario do veiculo:\n ");
     scanf("%s", nomeCompletoDono);
-    getchar();
+    
 
     // Coletando os dados do carro
     printf("Digite o modelo do carro: \n");
     scanf("%s",modelo);
-    getchar();
     
+
     printf("Digite o ano do carro: \n");
     scanf("%d", &ano);
     getchar();
 
     printf("Digite a placa do carro:\n ");
     scanf("%s", placa);
-    getchar();
+    
     
     // Exibindo os dados
     printf("\n--- Dados do Carro ---\n");
