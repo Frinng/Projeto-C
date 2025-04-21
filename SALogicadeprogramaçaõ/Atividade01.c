@@ -11,6 +11,8 @@ int main(int argc, char const *argv[])
     printf("Digite um segundo numero: ");
     scanf("%i", &n2);
 
-    
+    result = n1 * n2;
+
+    printf("O resultado e %i", result);
     return 0;
 }
