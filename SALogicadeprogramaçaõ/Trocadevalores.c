@@ -16,10 +16,37 @@ int main(){
     printf("Digite um numero: ");
     scanf("%d", &c);
 
-    if (a > b){
-
-    }else if (b > a){
-        
+    if (a > b && a > c){
+        if (b > c){
+            printf("\n1- %d",a);
+            printf("\n2- %d",b);
+            printf("\n3- %d",c);
+        }else{
+            d = b;
+            b = c;
+            c = d;
+            printf("\n1- %d",a);
+            printf("\n2- %d",b);
+            printf("\n3- %d",c);
+        }
+    }else if (b > a && b > c){
+        if (a > c){
+            d = b;
+            b = a;
+            a = d;
+            printf("\n1- %d",a);
+            printf("\n2- %d",b);
+            printf("\n3- %d",c);
+        }else{
+            f = a;
+            d = b;
+            b = c;
+            a = d;
+            c = f;
+            printf("\n1- %d",a);
+            printf("\n2- %d",b);
+            printf("\n3- %d",c);
+        }
     }else{
         
     }
