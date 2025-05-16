@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int a,b,c,d;
+    int a,b,c,d,e,f;
 
     printf("\n------------------------------------------\n");
     printf("\n|            Troca De Valores            |\n");
