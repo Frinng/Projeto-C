@@ -22,8 +22,8 @@ int main(){
         c = a;
         a = b;
         b = c;
-        printf("1- %d",a);
-        printf("2- %d",b);
+        printf("\n1- %d\n",a);
+        printf("\n2- %d\n",b);
     }
 
 }
