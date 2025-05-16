@@ -15,8 +15,8 @@ int main(){
 
 
     if (a > b){
-        printf("1- %d",a);
-        printf("2- %d",b);
+        printf("\n1- %d",a);
+        printf("\n2- %d",b);
 
     }else if (b > a){
         c = a;
