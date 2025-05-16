@@ -13,8 +13,6 @@ int main(){
     printf("Digite um numero: ");
     scanf("%d", &b);
 
-    printf("Digite um numero: ");
-    scanf("%d", &c);
 
     if (a > b){
 
