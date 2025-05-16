@@ -1,29 +1,28 @@
 #include <stdio.h>
 
 int main(){
-    int a,b,c,d;
+    int a,b,c,d,e,f;
 
     printf("\n------------------------------------------\n");
     printf("\n|            Troca De Valores            |\n");
     printf("\n------------------------------------------\n");
-
-    printf("Digite um numero: ");
+    
+    printf("\nDigite um numero: ");
     scanf("%d", &a);
 
-    printf("Digite um numero: ");
+    printf("\nDigite um numero: ");
     scanf("%d", &b);
-
 
     if (a > b){
         printf("\n1- %d",a);
         printf("\n2- %d",b);
-
     }else{
-        c = a;
-        a = b;
-        b = c;
-        printf("\n1- %d\n",a);
-        printf("\n2- %d\n",b);
+        c = b;
+        b = a;
+        a = c;
+
+        printf("\n1- %d",a);
+        printf("\n2- %d",b);
     }
 
 }
